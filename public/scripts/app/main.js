@@ -41,6 +41,6 @@ define(function (require) {
             viewLocator.useConvention();
 
             // This will call the Shell.js module, and use the 'entrance' animation to display the view.
-            app.setRoot('Shell', 'entrance');
+            app.setRoot('Shell','entrance');
         });
 });

@@ -1,46 +1,26 @@
 <!-- This markup will be inserted into the Shell.html where you see <div data-bind="router: ..."> -->
 <div class="row">
     <p>
-        This 'page' uses HomeView.html for the <i>view</i> (html markup), <br>
-        and HomeView.js for the <i>model</i> (Javascript data and functions).
+        <i>This is a demo app is created to display the power of <a href="http://inkfilepicker.com" target="_blank"> <u>ink</u></a>.<br>
+            It will allow you to choose files from your favorite(sorry but your favorite sharefile <i class="icon-sharefile" ></i>is yet to be
+            supported <i class="icon-thumbs-down"></i>) cloud storage<br>
+        </i>
+        <p><i class="icon-home"></i>&nbsp;<i class="icon-envelope"></i>&nbsp;<i class="icon-dropbox"></i>&nbsp;<i class="icon-facebook"></i></p>
+
     </p>
 
-    <div class="well">
-        <h3>Displaying Data</h3>
+    <div class="well" >
+        <p class="lead">select a file to upload</p>
+        <button type="button" class="btn btn-primary"  data-bind="click: ink">Choose files</button>
+        <p id="read-input"></p>
 
-        <p>The value of the 'rules' property will be displayed in this tag:</p>
-
-        <h2 data-bind="text: rules"></h2>
-
-        <p>Markup looks like:
-            <code>
-                &lt;h2 data-bind="text: rules"&gt;&lt;/h2&gt;
-            </code>
-        </p>
     </div>
 
+    <div class="well" data-bind="foreach: output">
 
-    <div class="well">
-        <h3>Modifying Data</h3>
+        <img id="read-result" data-bind="attr: {src: storeImg}" alt="" width="50%">
 
-        <p>The value of the 'rules' property in HomeView.js will be controlled by this input:</p>
-
-        <div>
-            1 <input type="range" min="1" max="20" data-bind="value: rules"/> 20
-        </div>
-
-        <p>Markup looks like:
-            <code>
-                &lt;input data-bind="value: rules"&gt;
-            </code>
-        </p>
     </div>
 
 </div>
 
-<div class="row">
-    <a href="#/about">
-        Go to the 'About' view
-        <span class="icon-circle-arrow-right"></span>
-    </a>
-</div>
