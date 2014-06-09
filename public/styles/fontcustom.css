@@ -1,0 +1,45 @@
+/*
+  Icon Font: fontcustom
+*/
+
+@font-face {
+  font-family: "fontcustom";
+  src: url("./fontcustom_9a97f31f476da22ecfc1d91aabec088d.eot");
+  src: url("./fontcustom_9a97f31f476da22ecfc1d91aabec088d.eot?#iefix") format("embedded-opentype"),
+       url("./fontcustom_9a97f31f476da22ecfc1d91aabec088d.woff") format("woff"),
+       url("./fontcustom_9a97f31f476da22ecfc1d91aabec088d.ttf") format("truetype"),
+       url("./fontcustom_9a97f31f476da22ecfc1d91aabec088d.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "fontcustom";
+    src: url("./fontcustom_9a97f31f476da22ecfc1d91aabec088d.svg#fontcustom") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-android3:before,
+.icon-sf:before,
+.icon-sharefile:before {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-android3:before { content: "\f101"; }
+.icon-sf:before { content: "\f103"; }
+.icon-sharefile:before { content: "\f104"; }
