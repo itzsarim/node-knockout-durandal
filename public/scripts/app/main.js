@@ -27,6 +27,7 @@ define(function (require) {
     var system = require('durandal/system');
     var viewLocator = require('durandal/viewLocator');
 
+
     system.debug(true);
 
     app.title = 'node.js Rules';
