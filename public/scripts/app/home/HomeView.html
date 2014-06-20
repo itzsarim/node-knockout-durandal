@@ -1,7 +1,7 @@
 <!-- This markup will be inserted into the Shell.html where you see <div data-bind="router: ..."> -->
 <div class="row">
     <p>
-        <i>This is a demo app is created to display the power of <a href="http://inkfilepicker.com" target="_blank"> <u>ink</u></a>.<br>
+        <i> Hi This is a demo app, created to display the power of <a href="http://inkfilepicker.com" target="_blank"> <u>ink</u></a>.<br>
             It will allow you to choose files from your favorite(sorry but your favorite sharefile <i class="icon-sharefile" ></i>is yet to be
             supported <i class="icon-thumbs-down"></i>) cloud storage<br>
         </i>
@@ -15,12 +15,15 @@
         <p id="read-input"></p>
 
     </div>
+<div data-bind="foreach: storeImg">
+    <div class="col-lg-4" >
 
-    <div class="well" data-bind="foreach: storeImg">
-
-        <img id="read-result" data-bind="attr: {src: $data}" alt="" width="50%">
+        <img id="read-result" data-bind="attr: {src: $data}" alt="" width="70%">
+        &nbsp;
+        <hr/>
 
     </div>
+</div>
 
 </div>
 

@@ -1,0 +1,29 @@
+<!-- This markup will be inserted into the Shell.html where you see <div data-bind="router: ..."> -->
+<div class="row">
+    <p>
+        <i> Hi This is a demo app, created to display the power of <a href="http://sharefile.com" target="_blank"> <u>sharefile</u></a>.<br>
+            It will allow you to choose files from your favorite sharefile <i class="icon-sharefile" ></i>cloud storage
+        </i>
+
+
+    </p>
+
+    <div class="well" >
+        <p class="lead">select a file to upload</p>
+        <button type="button" class="btn btn-primary"  data-bind="click: redirect" >Choose files</button>
+        <p id="read-input"></p>
+
+    </div>
+    <div data-bind="foreach: storeImg">
+        <div class="col-lg-6" >
+
+            <img id="read-result" data-bind="attr: {src: $data}" alt="" width="80%">
+            <a data-bind="attr: {href:$data}">Download</a>
+            &nbsp;
+            <hr/>
+
+        </div>
+    </div>
+
+</div>
+

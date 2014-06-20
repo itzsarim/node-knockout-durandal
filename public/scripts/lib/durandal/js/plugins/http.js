@@ -25,7 +25,7 @@ define(['jquery', 'knockout'], function($, ko) {
          * Makes an HTTP GET request.
          * @method get
          * @param {string} url The url to send the get request to.
-         * @param {object} [query] An optional key/value object to transform into query string parameters.
+         * @param {object} [query] An optional key/value o bject to transform into query string parameters.
          * @return {Promise} A promise of the get response data.
          */
         get:function(url, query) {

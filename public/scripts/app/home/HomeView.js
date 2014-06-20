@@ -23,7 +23,7 @@ define(function (require, exports, module) {
             filepicker.pickMultiple({
                 mimetypes: ['image/*', 'text/plain'],
                 container: 'window',
-                services: ['COMPUTER', 'FACEBOOK', 'GMAIL', 'DROPBOX']
+                services: ['COMPUTER', 'FACEBOOK', 'DROPBOX']
             }, function (InkBlob) {
                 console.log(JSON.stringify(InkBlob));
                 input = InkBlob;
@@ -32,16 +32,8 @@ define(function (require, exports, module) {
                     console.log("Choose an image to read below");
                 } else {
                     for (i = 0; i < input.length; i++)
-                        filepicker.read(input[i], {
-                            base64encode: true
-                        }, function (imgdata) {
-                            //                               output.src='data:image;base64,'+imgdata;
-                            temp = 'data:image;base64,' + imgdata;
-                            self.storeImg.push(temp);
-                            console.log("Read successful " + self.storeImg()[0]);
-                        }, function (fperror) {
-                            console.log(fperror.toString());
-                        });
+                        self.storeImg.push(input[i].url);
+
                 }
             }, function (FPError) {
                 console.log(FPError.toString());

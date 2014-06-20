@@ -11,15 +11,21 @@ define(function (require, exports, module) {
 
         self.router = router;
 
+
         // Durandal, by convention, will call 'activate' function on any module when it's loaded, if it is defined.
         self.activate = function () {
 
             // This sets up the client-side hash routing - has nothing to do with server side paths:
             router.map([
-                // A route of '' means it will load by default:
-                { route: '', title: 'Home', moduleId: 'home/HomeView', nav: true },
+                // This route is accessible by linking to '#/share'
+
+                { route: 'home', title: 'Home', moduleId: 'home/HomeView', nav: true },
                 // This route is accessible by linking to '#/about'
-                { route: 'about', title: 'About', moduleId: 'about/AboutView', nav: true }
+                { route: 'about', title: 'About', moduleId: 'about/AboutView', nav: true },
+                // A route of '' means it will load by default:
+                { route: '', title: 'Sharefile', moduleId: 'share/ShareView', nav: true },
+                // This route is accessible by linking to '#/authenticate'
+                { route: 'authenticate', title: 'Login', moduleId: 'authenticate/authenticate', nav: true }
             ]);
 
             return router.activate();
